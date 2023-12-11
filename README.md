@@ -3,6 +3,8 @@
 ## 安裝程序
 在Arduin ATMega32u4端，要燒入以下INO檔
 
+Sensor680/IDA_BME680/IDA_BME680.ino
+
 https://github.com/IoTtalk/Sensor680/blob/master/IDA_BME680/IDA_BME680.ino
 
 
