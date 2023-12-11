@@ -15,7 +15,11 @@ chmod 700 yunBME680DA.sh
 ./yunBME680DA.sh
 ```
 
-安裝完成後，斷電重啟板子後，看到白燈閃爍、紅燈亮起，即為成功運作。
+執行完上述指令後，會自動進入編輯config.py的狀態，
+
+https://github.com/IoTtalk/Sensor680/blob/master/config.py
+
+在config.py中，要填寫連線主機資訊(Lines 1 ~ 8)，填寫完成存檔後，斷電重啟板子後，看到白燈閃爍、紅燈亮起，即為成功運作。
 
 
 ## Device Model: 
