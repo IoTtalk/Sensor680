@@ -42,7 +42,7 @@ void loop() {
     Bridge.put("Temperature", valueStr); 
     dtostrf(AtmosphericPressure, 8, 0, valueStr);
     Bridge.put("AtPressure", valueStr);     
-    dtostrf(Humidity, 8, 0, valueStr);
+    dtostrf(Humidity, 6, 2, valueStr);
     Bridge.put("Humidity", valueStr);        
     dtostrf(Gas, 8, 0, valueStr);
     Bridge.put("Gas", valueStr);     
