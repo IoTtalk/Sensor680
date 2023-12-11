@@ -1,5 +1,35 @@
 # Sensor680
-SensorBox with Grove BME680
+
+## 安裝指令
+SSH登入ArduinoYun Linux介面後，輸入以下指令進行安裝程序。
+```
+wget http://yun.iottalk.tw/yunBME680DA.sh
+chmod 700 yunBME680DA.sh
+./yunBME680DA.sh
+```
+
+## Device Model: 
+```
+Sensor680
+```
+
+## Device Feature:
+```
+idf_list = [
+    ('Temperature', float),
+    ('AtPressure', float),
+    ('Humidity', float),
+    ('Gas', float),
+    ]
+
+```
+
+
+
+
+
+## 舊版說明，僅供參考
+### SensorBox with Grove BME680
 
 1. Arduino ATmega32u4 端，用Arduino IDE 燒入 IDA_BME680.ino，完成後，可用序列阜監控視窗驗證Arduino程式是否有正常運行。
 
