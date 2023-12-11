@@ -1,6 +1,10 @@
 # Sensor680
 
-## 安裝指令
+## 安裝程序
+在Arduin ATMega32u4端，要燒入以下INO檔
+https://github.com/IoTtalk/Sensor680/blob/master/IDA_BME680/IDA_BME680.ino
+
+
 SSH登入ArduinoYun Linux介面後，輸入以下指令進行安裝程序。
 ```
 wget http://yun.iottalk.tw/yunBME680DA.sh
