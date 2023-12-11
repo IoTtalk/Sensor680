@@ -9,11 +9,13 @@ chmod 700 yunBME680DA.sh
 ```
 
 ## Device Model: 
+本應用的IoTtalk Device Model 為
 ```
 Sensor680
 ```
 
 ## Device Feature:
+本應用的IoTtalk Input Device Feature (IDF) 為
 ```
 idf_list = [
     ('Temperature', float),
