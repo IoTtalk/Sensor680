@@ -36,16 +36,20 @@ void loop() {
     //BME 大氣壓   D2, D3
     float Temperature = bme680.sensor_result_value.temperature;
     uint32_t AtmosphericPressure = bme680.sensor_result_value.pressure;
-    uint32_t Humidity = bme680.sensor_result_value.humidity;
+    float Humidity = bme680.sensor_result_value.humidity;
+    uint32_t Gas = bme680.sensor_result_value.gas;
     dtostrf(Temperature, 6, 2, valueStr);
     Bridge.put("Temperature", valueStr); 
     dtostrf(AtmosphericPressure, 8, 0, valueStr);
     Bridge.put("AtPressure", valueStr);     
     dtostrf(Humidity, 8, 0, valueStr);
     Bridge.put("Humidity", valueStr);        
+    dtostrf(Gas, 8, 0, valueStr);
+    Bridge.put("Gas", valueStr);     
     Serial.print("Temp: ");        Serial.print(Temperature);    Serial.println(" C");// unit: C
     Serial.print("Humidity: ");    Serial.print(Humidity);    Serial.println(" %"); // unit:%
     Serial.print("Pressure: ");    Serial.print(AtmosphericPressure);    Serial.println(" Pa");     // unit: Pa
+    Serial.print("Gas: ");    Serial.print(Gas);    Serial.println(" ohms");     // unit: Pa
     Serial.println("=========================================================================");    
     
     delay(1000);
