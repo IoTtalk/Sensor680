@@ -14,7 +14,8 @@ def register(mac_addr, profile, UsingSession=IoTtalk):
     global passwordKey
     r = UsingSession.post(
         ENDPOINT + '/' + mac_addr,
-        json={'profile': profile}, timeout=TIMEOUT
+        json={'profile': profile}, timeout=TIMEOUT,
+        verify=False   
     )
     if r.status_code != 200: raise CSMError(r.text)
     else: passwordKey = r.json().get('password')
@@ -32,7 +33,8 @@ def push(mac_addr, df_name, data, UsingSession=IoTtalk):
         ENDPOINT + '/' + mac_addr + '/' + df_name,
         json={'data': data},
         timeout=TIMEOUT,
-        headers = {'password-key': passwordKey}
+        headers = {'password-key': passwordKey},
+        verify=False
     )
     if r.status_code != 200: raise CSMError(r.text)
     return True
@@ -42,7 +44,8 @@ def pull(mac_addr, df_name, UsingSession=IoTtalk):
     r = UsingSession.get(
         ENDPOINT + '/' + mac_addr + '/' + df_name,
         timeout=TIMEOUT,
-        headers = {'password-key': passwordKey}
+        headers = {'password-key': passwordKey},
+        verify=False
     )
     if r.status_code != 200: raise CSMError(r.text)
     return r.json()['samples']
