@@ -10,9 +10,11 @@ https://github.com/IoTtalk/Sensor680/blob/master/IDA_BME680/IDA_BME680.ino
 
 之後SSH登入ArduinoYun Linux介面後，輸入以下指令進行安裝程序。(要先讓Yun連上Internet才可執行下列指令)
 ```
-wget http://yun.iottalk.tw/yunBME680DA.sh
-chmod 700 yunBME680DA.sh
-./yunBME680DA.sh
+wget http://yun.iottalk.tw/yunBME680DAinstall.tar.gz
+tar zvxf yunBME680DAinstall.tar.gz
+rm yunBME680DAinstall.tar.gz
+chmod 700 yunBME680DAinstall.sh
+./yunBME680DAinstall.sh
 ```
 
 執行完上述指令後，會自動進入編輯config.py的狀態，
