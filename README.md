@@ -1,5 +1,12 @@
 # Sensor680
 
+## Required BME680 library for Arduino IDE:
+https://github.com/Seeed-Studio/Seeed_Arduino_BME68x
+
+In Arduino IDE, please use "Add .ZIP Library" in "Include Library" of "Sketch" to add BME680 .ZIP library.
+
+Also, the "Bridge" library is required which can be installed from "Manage Libraries..." (Library Manager).
+
 ## 安裝程序
 在Arduino ATMega32u4端，要燒入以下INO檔
 
